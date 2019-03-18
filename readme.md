@@ -4,6 +4,7 @@ This boilerplate is for a stander html/css/js workflow. You create all your file
 - SCSS
 - Auto prefixer
 - Live Server
+- Babel polyfill ( env ) only uses polyfills that you require based on the supported browsers in package.json
 
 ## Other boilerplates  
 ### Boilerplate for react full stack development with Nextjs:
