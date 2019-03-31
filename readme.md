@@ -10,7 +10,10 @@ This boilerplate is for a standerd html/css/js build without any frameworks. Web
 - Babel so you can write Javascript Next
 - Babel polyfill ( env ) only uses polyfills that you require based on the supported browsers in package.json for smaller files
 
-View the example design on CodePen: https://codepen.io/litonfiredesign/full/BbXZPa
+## About the example files?
+View the example design on CodePen: https://codepen.io/litonfiredesign/full/BbXZPa<br><br>
+
+The design is fully responsive, It should yield great results down to widths of 325px and respond properly upwards to 4k. The page will resize with zoom so that you can still view the page at 500x zoom. Changing your default browser font size will also create the appearance of a zoomed page by increasing all page sizing with the font size increase and visa versa. 
 
 ## Plans?
 
