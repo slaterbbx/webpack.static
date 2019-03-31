@@ -42,3 +42,7 @@ Build a minified production version of your app that will be in the ./dist folde
 ## Other boilerplates  
 ### Boilerplate for react full stack development with Nextjs:
 https://github.com/slaterbbx/fullstackinator
+
+
+## License
+MIT License | Fullstackinator © 2019 Kyle Gallagher
