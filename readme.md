@@ -10,6 +10,8 @@ This boilerplate is for a standerd html/css/js build without any frameworks. Web
 - Babel so you can write Javascript Next
 - Babel polyfill ( env ) only uses polyfills that you require based on the supported browsers in package.json for smaller files
 
+View the example design on CodePen: https://codepen.io/litonfiredesign/full/BbXZPa
+
 ## Plans?
 
 - [ ] Automatic image optimizations with Webpack. ( for now the example is just using remote images from unsplash )
