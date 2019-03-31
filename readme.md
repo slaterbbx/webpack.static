@@ -22,19 +22,19 @@ The design is fully responsive, It should yield great results down to widths of 
 # Commands
 
 ## Install dependencies
-Install the needed node modules
+Install the needed node modules<br>
 `npm install`
 
 ## Run development live server
-Put all of your files in the src folder based on the examples structure
+Put all of your files in the src folder based on the examples structure<br>
 `npm start`
 
 ## Build development files
-This is so you can look at the files in the ./dist folder to explore your code without minification
+This is so you can look at the files in the ./dist folder to explore your code without minification<br>
 `npm dev`
 
 ## Build development files
-Build a minified production version of your app that will be in the ./dist folder
+Build a minified production version of your app that will be in the ./dist folder<br>
 `npm run build`
 
 
