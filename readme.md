@@ -2,6 +2,7 @@
 ## Great for an easy HTML / SCSS / JS Sandbox environment.
 This boilerplate is for a standerd html/css/js build without any frameworks. Webpack to minify and bundle all files. The dev environment is run in the webpack dev server, all files are moved ( even images ) to a production folder upon building and are hosted in ram during the dev server.
 
+- Best practices example project
 - JS / CSS / HTML, minification
 - Image name hashing
 - SCSS
