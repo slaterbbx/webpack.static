@@ -1,0 +1,85 @@
+.contact{
+	width: 100%;
+	padding: 0 15%;
+	margin-bottom: 10rem;
+	
+	@include respond(desktop) {
+		padding: 0 10%;
+	}
+	
+	@include respond(tab-land) {
+		padding: 0 5%;
+	}
+	
+	@include respond(tab-port) {
+	  	padding: 0 0;
+	}
+	
+	&__inner{
+		padding: 10rem 10rem 0 10rem;
+		width: 100%;
+		
+		@include respond(phone) {
+			padding: 10rem 2rem 0 2rem;
+		}
+	}
+	
+	&__title{
+		margin-bottom: 3rem;
+		font-size: 9rem;
+		font-family: $font-primary;
+		font-weight: 700;
+		color: $color-grey2;
+		line-height: .8;
+		
+		@include respond(phone) { 
+			font-size: 7.5rem;
+		}
+	}
+	
+	&__subtitle{
+		font-size: 3rem;
+		font-family: $font-secondary;
+		color: $color-grey2;
+		margin-bottom: 4rem;
+	}
+	
+	&__input_wrapper{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 3rem;
+	}
+	
+	&__name,
+	&__email,
+	&__textarea{
+		outline: none;
+		padding: 1rem 2rem;
+		border-radius: 5px;
+		border: 1px solid $color-grey2;
+		font-size: 3rem;
+		font-family: inherit;
+		font-weight: 100;
+		color: $color-grey2;
+		
+		&::placeholder{
+			color: $color-light-grey2;
+		}
+	}
+
+	&__name,
+	&__email{
+		width: 48%;
+	}
+
+	&__textarea{
+		width: 100%;
+		resize: none;
+		margin-bottom: 2rem;
+	}
+
+	&__submitWrapper{
+		display: flex;
+		justify-content: flex-end;
+	}
+}

@@ -1,0 +1,103 @@
+.nameCard{
+	position: relative;
+	display: flex;
+	padding: 0 15%;
+	
+	@include respond(desktop) {
+		padding: 0 10%;
+	}
+	
+	@include respond(tab-port) {
+		padding: 0 0;
+	}
+	
+	&__body{
+		flex-basis: 100%;
+		padding: 10rem 10rem 10rem 10rem;
+		background-color: $color-white;
+		margin-right: 10%;
+		overflow: hidden;
+	  
+		@include respond(tab-land) {
+			margin-right: 0;
+		}
+	  
+		@include respond(tab-port) {
+			padding: 5rem 10rem 5rem 10rem;
+		}
+		
+		@include respond(phone) {
+			padding: 5rem 2rem 5rem 2rem;
+		}
+	}
+	
+	&__photo{
+		position: absolute;
+		top: -15rem;
+		right: 20%;
+		width: 35rem;
+		height: 35rem;
+		border-radius: 200px;
+		box-shadow: 0 1rem 2rem rgba($color-black, .1);
+		background-position: bottom;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-image: url('https://images.unsplash.com/photo-1523799284593-e3805dc391d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80');
+		
+		@include respond(desktop){
+			right: 10%;
+		}
+		
+		@include respond(desktop-mini){
+			right: 4%;
+		}
+		
+		@include respond(tab-land) {
+			position: relative;
+			background-position: center;
+			margin-bottom: 8rem;
+			border-radius: 0;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+	}
+	
+	p{
+		font-size: 2.3rem;
+		margin-bottom: 4rem;
+	}
+	
+	&__base{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	&__socialIcons{
+	  
+		a{
+			&:not(:last-child){
+				margin-right: 1rem;
+				
+				@include respond(phone) {
+				margin-right: .3rem;
+				}
+			}
+		}
+		
+		&_item{
+			width: 5rem;
+			max-height: 4rem;
+			fill: $color-grey2;
+			transform: translateY(0);
+			transition: all .2s ease;
+		
+			&:hover{
+				fill: $color-grey1;
+				transform: translateY(-0.5rem);
+				cursor: pointer;
+			}
+		}
+	}
+}

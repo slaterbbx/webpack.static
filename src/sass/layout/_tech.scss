@@ -1,0 +1,172 @@
+.tech{ 
+    width: 100%;
+    padding: 0 15%;
+    
+    @include respond(desktop) {
+		padding: 0 10%;
+    }
+    
+    @include respond(tab-port) {
+		padding: 0 0;
+    }
+
+    &__header{
+		display: flex;
+		justify-content: space-between;
+		background-color: $color-white;
+		margin-bottom: -8rem; // need this to adjust for the line height on the title
+		
+		padding: 13rem 10rem 0 10rem;
+		
+		@include respond(phone){
+			display: block;
+			text-align: center;
+			padding: 5rem 0 0 0;
+		}
+    }
+
+    &__title{
+		// Just doing this for SEO quality
+		h2{
+			line-height: 0;
+		
+			@include respond(phone){
+				line-height: 1.2;
+			}
+		}
+    }
+
+    &__subtitle{
+		// Just doing this for SEO quality
+		h3{
+			align-self: flex-end;
+		}
+    }
+
+    &__body{
+		display: flex;
+		justify-content: space-between;
+		padding: 10rem 10rem 10rem 10rem;
+		background-color: $color-white;
+		
+		@include respond(tab-land) {
+			display: block;
+		}
+		
+		@include respond(phone) {
+			padding: 10rem 2rem 5rem 2rem;
+		}
+		
+		&_box_title{
+		
+			h3{
+				color: white;
+				font-family: $font-secondary;
+				margin-bottom: 2rem;
+			}
+		}
+		
+		&_box1,
+		&_box2{
+			flex: 0 1 48%;
+			position: relative;
+			border-radius: 1rem;
+			background-position: center;
+			background-size: cover;
+			padding: 3rem 3.5rem;
+			color: $color-white;
+			z-index: 3;
+			transform: translateY(0);
+			transition: all .2s;
+		
+		@include respond(tab-land) {
+			&:not(:last-child){
+				margin-bottom: 4rem;
+			}
+		}
+		
+		&::after{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 1rem;
+			transform: scale(1);
+			background-color: hidden;
+			z-index: 2;
+			transition: all .3s;
+		}
+		
+		&:hover{
+			cursor: pointer;
+			transform: translateY(-1rem);
+			box-shadow: 0 1rem 2rem rgba($color-black, .1);
+			
+			&::after{
+				transform: scale(1.1, 1.2);
+				background-color: $color-light-grey2;
+				opacity: 0;
+			}
+		}
+		}
+		
+		// This section could debatably be better.
+		// Maybe for a later date.
+		&_box1{
+			background-image: linear-gradient(to right bottom,
+				rgba($color-black, 0.8),
+				rgba($color-black, 0.1)),
+				url('https://images.unsplash.com/photo-1487304655522-c039cc299c9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+			
+			&:hover{
+				background-image: linear-gradient(to right bottom,
+				rgba($color-black, 0.5),
+				rgba($color-black, 0)),
+				url('https://images.unsplash.com/photo-1487304655522-c039cc299c9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+			}
+		}
+		
+		&_box2{
+			background-image: linear-gradient(to right bottom,
+				rgba($color-black, 0.8),
+				rgba($color-black, 0.1)),
+				url('https://images.unsplash.com/photo-1548010171-a9d70b567c9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2602&q=80');
+			
+			&:hover{
+				background-image: linear-gradient(to right bottom,
+				rgba($color-black, 0.5),
+				rgba($color-black, 0)),
+				url('https://images.unsplash.com/photo-1548010171-a9d70b567c9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2602&q=80');
+			}
+		}
+	}
+
+	&__base{
+		background: $color-white;
+		text-align: center;
+		padding: 0 10rem 5rem 10rem;
+		
+		@include respond(phone) {
+			padding: 0 5rem 5rem 5rem;
+		}
+		
+		&_button{
+			display: flex;
+			background: $color-white;
+			justify-content: flex-end;
+			padding: 0 10rem 10rem 10rem;
+		
+			@include respond(phone) {
+				justify-content: center;
+				padding: 0 2rem 5rem 2rem;
+			}
+		}
+		
+		p{
+			font-size: 2.5rem;
+			font-family: $font-primary;
+		}
+	}
+}
