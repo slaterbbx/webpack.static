@@ -56,11 +56,15 @@
 		outline: none;
 		padding: 1rem 2rem;
 		border-radius: 5px;
-		border: 1px solid $color-grey2;
+		border: .1rem solid $color-grey2;
 		font-size: 3rem;
 		font-family: inherit;
 		font-weight: 100;
 		color: $color-grey2;
+
+		&:focus{
+			border-color: $color-light-grey2;
+		}
 		
 		&::placeholder{
 			color: $color-light-grey2;

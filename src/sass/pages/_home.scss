@@ -77,6 +77,8 @@
 	&__socialIcons{
 	  
 		a{
+			outline: none;
+
 			&:not(:last-child){
 				margin-right: 1rem;
 				
@@ -84,8 +86,13 @@
 				margin-right: .3rem;
 				}
 			}
+
 		}
-		
+
+		a:focus &_item{
+			transform: translateY(-0.5rem);
+		}
+	
 		&_item{
 			width: 5rem;
 			max-height: 4rem;
