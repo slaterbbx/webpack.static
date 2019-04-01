@@ -11,6 +11,18 @@
 	a{
 		color: inherit;
 		text-decoration: none;
+		// fix: stops bug from happening with user access for tabbing
+		// Operates smoothly when tabbing the footer links by compensating for the 1px border
+		padding: 6px 13px;
+		
+		// User access functionality
+		&:focus{
+			outline: none;
+			border: 1px solid $color-white;
+			border-radius: 8px;
+			// Here we subtract the 1px difference both ways
+			padding: 5px 12px;
+		}
 	}
 	
 	&__links{
