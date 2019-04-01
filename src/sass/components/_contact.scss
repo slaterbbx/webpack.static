@@ -76,6 +76,14 @@
 		width: 48%;
 	}
 
+	&__email{
+		&:focus:invalid {
+			background-color: $color-warning;
+			border-color: $color-grey2;
+		}
+	}
+
+
 	&__textarea{
 		width: 100%;
 		resize: none;
