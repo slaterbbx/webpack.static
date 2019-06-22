@@ -1,0 +1,114 @@
+.navigation{
+		// ------- Nav Menu X Button / Checkbox Hack ------- //
+		&__checkbox {
+				// Hide the checkbox that is used to keep the X switched
+				display: none;
+			}
+
+			&__button {
+				height: 7rem;
+				width: 7rem;
+				position: absolute;
+				top: 1.3rem;
+				right: 1.8rem;
+				border-radius: 50%;
+				z-index: 2000;
+				cursor: pointer;
+			
+				@include respond(phone){
+					top: .3rem;
+					right: 1.4rem;
+				}
+			}
+
+		&__icon-x {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: transparent;
+
+			&,
+			&::before,
+			&::after {
+				display: inline-block;
+
+				position: absolute;
+				border-radius: 30px;
+				width: 5rem;
+				height: 4px;
+
+			}
+
+			&::before,
+			&::after {
+				content: "";
+				left: 0;
+				top: 0;
+				background-color: $color-white;
+				transition: transform .4s;
+				perspective: 1500;
+			}
+
+			&--lines {
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-color: transparent;
+
+				&,
+				&::before,
+				&::after {
+					display: inline-block;
+
+					position: absolute;
+					border-radius: 30px;
+					width: 5rem;
+					height: 4px;
+				}
+
+				&::before,
+				&::after {
+					content: "";
+					left: 0;
+					background-color: $color-white;
+					transition: all .4s cubic-bezier(.165, .84, .44, 1);
+				}
+
+				&::before {
+					transform: translateY(-1rem);
+				}
+
+				&::after { 
+					transform: translateY(1rem);
+				}
+			}
+		}
+
+		// X - 1 action check
+		&__checkbox:checked ~ &__button &__icon-x::before {
+			transform: rotate(-135deg) scale(1.1);
+			transition-delay: .2s;
+		}
+
+		// X - 2 action check
+		&__checkbox:checked ~ &__button &__icon-x::after {
+			transform: rotate(135deg) scale(1.1);
+			transition-delay: .2s;
+		}
+
+		// X - 1 & X - 2 action uncheck
+		&__checkbox:not(:checked) ~ &__button &__icon-x::before, &__checkbox:not(:checked) ~ &__button &__icon-x::after {
+			transition: transform .4s;
+		}
+
+		// Top line and bottom line action check
+		&__checkbox:checked ~ &__button &__icon-x--lines::before, &__checkbox:checked ~ &__button &__icon-x--lines::after {
+			opacity: 0;
+			transform: translateY(0);
+		}
+
+		// Top line and bottom line action uncheck
+		&__checkbox:not(:checked) ~ &__button &__icon-x--lines::before, &__checkbox:not(:checked) ~ &__button &__icon-x--lines::after {
+			transition: all .5s .4s cubic-bezier(.19, 1, .22, 1);
+		}
+}
