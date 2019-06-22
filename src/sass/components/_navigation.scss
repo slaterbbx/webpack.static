@@ -1,8 +1,8 @@
 .navigation{
 
 	&__container{
-		// Opacity 0 because this is a work in progress
-		opacity: 0;
+		// hidden because its a work in progress
+		display: none;
 
 		position: absolute;
 		top: 0;
@@ -28,7 +28,7 @@
 			}
 		}
 	}
-	
+
 	// ------- Nav Menu X Button / Checkbox Hack ------- //
 	&__checkbox {
 			// Hide the checkbox that is used to keep the X switched
