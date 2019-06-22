@@ -60,7 +60,8 @@ module.exports = {
                     options: {
                       presets: [
                         ["@babel/preset-env", {
-                            useBuiltIns: 'usage'
+														useBuiltIns: 'usage',
+														corejs: "3.0.0"
                         }], // uses preset-env and calls on babel polyfils based on usage
                       ],
                     babelrc: false
