@@ -1,22 +1,21 @@
 # WebDev SandBox
 ## Great for an easy HTML / SCSS / JS Sandbox environment.
-This boilerplate is for a standerd html/css/js build without any frameworks. Webpack +UglifyJs to minify and bundle all files. The dev environment is run in the webpack dev server, all files are moved ( even images ) to a production folder upon building and are hosted in ram during the dev server.
+This boilerplate is for a standerd html/css/js build without any frameworks. Webpack + UglifyJs to minify and bundle all files. The dev environment is run in the webpack dev server, all files are moved ( even images ) to a production folder upon building and are hosted in ram during the HMR webpack dev server.
 
 - Best practices example project
-- JS / CSS / HTML, minification
-- Image name hashing for cache
 - SCSS
 - Auto prefixer
-- SVGuse polyfill for SVGsprite imports browser support.
-- Live Server
+- JS / CSS / HTML, minification
+- Extracts CSS to an external file
+- HMR live server
+- Build dev or production ( dev build excludes minification for css and js )
+- All image urls will be automatically resolved and moved to ./dist folder when built.
 - Babel so you can write Javascript ES.Next
 - Babel polyfill ( env ) only uses polyfills that you require based on the supported browsers in package.json for smaller and more optimized production builds.
 
 ## Plans?
 
-- [ ] Automatic image optimizations with Webpack. ( for now the example is just using remote images from unsplash )
-- [ ] Add an example for SVGuse sprite usage instead of inline svg ( currently inline )
-- [ ] Maybe build on to the example file more
+- [ ] Automatic image optimizations with Webpack.
 
 # Commands
 
@@ -32,12 +31,12 @@ Put all of your files in the src folder based on the examples structure<br>
 
 ### Build development files
 This is so you can look at the files in the ./dist folder to explore your code without minification<br>
-#### `npm dev`
+#### `npm run dev`
 --------------------------------------
 
 ### Build production files
 Build a minified production version of your app that will be in the ./dist folder<br>
-#### `npm run build`
+#### `npm run prod`
 --------------------------------------
 
 ## Example Project Included
