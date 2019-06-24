@@ -94,7 +94,7 @@ module.exports = {
 								sourceMap: true,
 								sourceMapContents: false
 							}
-						},
+						}
 				],
 			},
 			{
@@ -119,7 +119,7 @@ module.exports = {
 				use: [
 					{ loader: "file-loader",
 						options: {
-							name: "images/[name].[ext]", // hash images so if changed, people see newest versions
+							name: "images/[name].[ext]"
 						}
 					}
 				]
