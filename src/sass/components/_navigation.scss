@@ -15,16 +15,16 @@
 		padding: 10rem 7rem 0 7rem;
 		height: 100vh;
 		box-shadow: -.5rem 0 .5rem rgba(0, 0, 0, 0.1);
-	
-		&-links{
-			color: $color-white;
-			list-style: none;
+	}
 
-			&-item{
-				color: inherit;
-				&:not(:last-child){
-					margin-bottom: 1rem;
-				}
+	&__links{
+		color: $color-white;
+		list-style: none;
+
+		&-item{
+			color: inherit;
+			&:not(:last-child){
+				margin-bottom: 1rem;
 			}
 		}
 	}
