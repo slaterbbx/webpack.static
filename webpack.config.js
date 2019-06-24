@@ -74,19 +74,26 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader, // extracts css from js and makes a sep cssfile
                         options: {
-                            publicPath: '../'
+														publicPath: '../',
                         }
                     },
                     {
                         loader: "css-loader", // translates CSS into CommonJS
-                    },
+										},
                     {
                         loader: 'postcss-loader', // used to autoprefix
                         options: {plugins:[require('autoprefixer')()]}
-                    },
+										},
+										{
+											loader: 'resolve-url-loader',
+										},
                     {
-                        loader: "sass-loader" // compiles Sass to CSS
-                    }
+												loader: "sass-loader", // compiles Sass to CSS
+												options: {
+													sourceMap: true,
+													sourceMapContents: false
+												}
+										},
                 ],
             },
             {
