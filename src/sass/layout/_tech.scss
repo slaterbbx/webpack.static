@@ -118,13 +118,13 @@
 			background-image: linear-gradient(to right bottom,
 				rgba($color-black, 0.8),
 				rgba($color-black, 0.1)),
-				url('https://images.unsplash.com/photo-1487304655522-c039cc299c9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+				url('../../img/drone.jpg');
 			
 			&:hover{
 				background-image: linear-gradient(to right bottom,
 				rgba($color-black, 0.5),
 				rgba($color-black, 0)),
-				url('https://images.unsplash.com/photo-1487304655522-c039cc299c9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+				url('../../img/drone.jpg');
 			}
 		}
 		
@@ -132,13 +132,13 @@
 			background-image: linear-gradient(to right bottom,
 				rgba($color-black, 0.8),
 				rgba($color-black, 0.1)),
-				url('https://images.unsplash.com/photo-1548010171-a9d70b567c9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2602&q=80');
+				url('../../img/camera.jpg');
 			
 			&:hover{
 				background-image: linear-gradient(to right bottom,
 				rgba($color-black, 0.5),
 				rgba($color-black, 0)),
-				url('https://images.unsplash.com/photo-1548010171-a9d70b567c9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2602&q=80');
+				url('../../img/camera.jpg');
 			}
 		}
 	}
