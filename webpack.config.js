@@ -118,7 +118,7 @@ module.exports = {
                 use: [
                   { loader: "file-loader",
                     options: {
-                      name: "images/[sha512:hash:hex:5]-[name].[ext]", // hash images so if changed, people see newest versions
+                      name: "images/[name].[ext]", // hash images so if changed, people see newest versions
                     }
                   }
                 ]
