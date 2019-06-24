@@ -47,7 +47,6 @@ module.exports = {
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: "scripts/min.css",
-			// chunkFilename: "[id].css"
 		})
 	],
 	module: {
@@ -61,7 +60,7 @@ module.exports = {
 						presets: [
 							["@babel/preset-env", {
 								useBuiltIns: 'usage',
-								corejs: "3.0.0"
+								corejs: "3.1.4"
 							}], // uses preset-env and calls on babel polyfils based on usage
 						],
 					babelrc: false
@@ -115,11 +114,11 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(jpg|png|gif|svg)$/,
+				test: /\.(jpe?g|png|gif|svg)$/,
 				use: [
 					{ loader: "file-loader",
 						options: {
-							name: "images/[name].[ext]"
+							name: "img/[name].[ext]"
 						}
 					}
 				]
