@@ -71,30 +71,30 @@ module.exports = {
 			{
 				test: /\.(sa|sc|c)ss$/,
 				use: [
-						{
-							loader: MiniCssExtractPlugin.loader, // extracts css from js and makes a sep cssfile
-							options: {
-								publicPath: '../',
-							}
-						},
-						{
-							loader: "css-loader", // translates CSS into CommonJS
-						},
-						{
-							loader: 'postcss-loader', // used to autoprefix
-							options: {plugins:[require('autoprefixer')()]}
-						},
-						{
-							loader: 'resolve-url-loader', // used to resolve image urls in css
-						},
-						{
-							loader: "sass-loader", // compiles Sass to CSS
-							options: {
-								// source maps must be on so that we can resolve the image urls in css
-								sourceMap: true,
-								sourceMapContents: false
-							}
+					{
+						loader: MiniCssExtractPlugin.loader, // extracts css from js and makes a sep cssfile
+						options: {
+							publicPath: '../',
 						}
+					},
+					{
+						loader: "css-loader", // translates CSS into CommonJS
+					},
+					{
+						loader: 'postcss-loader', // used to autoprefix
+						options: {plugins:[require('autoprefixer')()]}
+					},
+					{
+						loader: 'resolve-url-loader', // used to resolve image urls in css
+					},
+					{
+						loader: "sass-loader", // compiles Sass to CSS
+						options: {
+							// source maps must be on so that we can resolve the image urls in css
+							sourceMap: true,
+							sourceMapContents: false
+						}
+					}
 				],
 			},
 			{
