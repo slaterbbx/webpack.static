@@ -15,8 +15,8 @@ This boilerplate is for a standerd html/css/js build without any frameworks. Web
 
 ## Plans?
 
-- [ ] Automatic image optimizations with Webpack.
-- [ ] Automated file name hashing for cache
+- [ ] Automatic image optimizations with Webpack. ( I have found that automated responsive images is a bit tricky with this setup, mainly because all plugins for webpack for responsive images seem to revolve around use with react, Image optimization ie. file compression, is a simple option but still does not automated responsive images. If anyone has a solution to this, please feel free to create a pull request. )
+- [ ] Automated file name hashing for cache ( This is simple and is on my to-do. )
 
 # Commands
 
