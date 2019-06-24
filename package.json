@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
-  "version": "1.0.0",
-  "description": "WebDev boilerPlate",
+  "name": "webpack-webdev-boilerplate",
+  "version": "1.0.1",
+  "description": "Webpack boilerplate for website development with HTML / SCSS / JS",
   "private": true,
   "browserslist": [
     "last 2 version",
@@ -10,11 +10,11 @@
     "Firefox ESR"
   ],
   "scripts": {
+    "start": "webpack-dev-server --mode development --open",
     "dev": "webpack --mode development",
-    "prod": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "prod": "webpack --mode production"
   },
-  "author": "Kyle Gallagher",
+  "author": "Kyle Gallagher email: me@lofde.com",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.4.5",
