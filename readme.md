@@ -1,5 +1,5 @@
-# WebDev SandBox
-## Great for an easy HTML / SCSS / JS Sandbox environment.
+# Webpack WebDev Boilerplate
+## HTML / SCSS / JS Webpack build environment.
 This boilerplate is for a standerd html/css/js build without any frameworks. Webpack + UglifyJs to minify and bundle all files. The dev environment is run in the webpack dev server, all files are moved ( even images ) to a production folder upon building and are hosted in ram during the HMR webpack dev server.
 
 - Best practices example project
@@ -16,6 +16,7 @@ This boilerplate is for a standerd html/css/js build without any frameworks. Web
 ## Plans?
 
 - [ ] Automatic image optimizations with Webpack.
+- [ ] Automated file name hashing for cache
 
 # Commands
 
