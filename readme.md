@@ -24,22 +24,22 @@ This boilerplate allows you to incorporate a modern workflow with static website
 
 ## 🖥️ Commands
 
-### 📩 Install dependencies
+### Install dependencies
 Install the needed node modules<br>
 #### `npm install`
 --------------------------------------
 
-### 🔨 Run development live server
+### Run development live server
 Put all of your files in the src folder based on the examples structure<br>
 #### `npm start`
 --------------------------------------
 
-### 🤖 Build development files
+### Build development files
 This is so you can look at the files in the ./dist folder to explore your code without minification<br>
 #### `npm run dev`
 --------------------------------------
 
-### 📦 Build production files
+### Build production files
 Build a minified production version of your app that will be in the ./dist folder<br>
 #### `npm run prod`
 --------------------------------------
