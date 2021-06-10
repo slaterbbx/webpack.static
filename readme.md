@@ -1,3 +1,8 @@
+# Important Notes: Working with node version v12.22.0
+- Requires sass to be installed globally.
+- Use NVM to manage your node versions to use this. v12.22.0 working ( tested )
+- I will be rebuilding this out of necessity, so updates to work with current node eventually.
+
 # 🛰️ Static HTML / SCSS / JS Webpack build environment.
 This boilerplate is for static HTML / CSS / JS builds without any frameworks. Webpack + UglifyJs to minify and bundle all files. The dev environment is run in the webpack dev server, all files are moved ( even images ) to a production folder upon building and are hosted in ram while running the webpack dev server.  
 
