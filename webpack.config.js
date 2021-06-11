@@ -3,8 +3,9 @@
 
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 
 module.exports = {
@@ -26,7 +27,10 @@ module.exports = {
 				extractComments: true
 			}),
 			// minifycss
-			new OptimizeCssAssetsPlugin({})
+			new CssMinimizerPlugin({
+				// Build parallel to speed up dev / build times
+				parallel: true,
+			})
 		],
 		// this is used to export the css from the js file import into a seperate css file
 		splitChunks: {
@@ -74,6 +78,7 @@ module.exports = {
 						loader: MiniCssExtractPlugin.loader, // extracts css from js and makes a sep cssfile
 						options: {
 							publicPath: '../',
+							minimize: true
 						}
 					},
 					{
