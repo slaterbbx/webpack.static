@@ -4,7 +4,10 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
+
+
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 // const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 
@@ -18,14 +21,20 @@ module.exports = {
 		filename: 'scripts/min.js'
 	},
 	optimization: {
+		minimize: true,
 		minimizer: [
-			// minifyjs
-			new UglifyJsPlugin({
-				cache: true,
+			// minifyjs ( terserplugin is built into webpack 5 )
+			new TerserPlugin({
 				parallel: true,
-				sourceMap: false, // set to true if you want JS source maps
-				extractComments: true
 			}),
+
+			// new UglifyJsPlugin({
+			// 	cache: true,
+			// 	parallel: true,
+			// 	sourceMap: false, // set to true if you want JS source maps
+			// 	extractComments: true
+			// }),
+
 			// minifycss
 			new CssMinimizerPlugin({
 				// Build parallel to speed up dev / build times
@@ -78,7 +87,7 @@ module.exports = {
 						loader: MiniCssExtractPlugin.loader, // extracts css from js and makes a sep cssfile
 						options: {
 							publicPath: '../',
-							minimize: true
+							// minimize: true
 						}
 					},
 					{
@@ -86,7 +95,7 @@ module.exports = {
 					},
 					{
 						loader: 'postcss-loader', // used to autoprefix
-						options: {plugins:[require('autoprefixer')()]}
+						// options: {plugins:[require('autoprefixer')()]}
 					},
 					{
 						loader: 'resolve-url-loader', // used to resolve image urls in css
@@ -96,7 +105,7 @@ module.exports = {
 						options: {
 							// source maps must be on so that we can resolve the image urls in css
 							sourceMap: true,
-							sourceMapContents: false
+							// sourceMapContents: false
 						}
 					}
 				],
@@ -112,8 +121,8 @@ module.exports = {
 					{ loader: "extract-loader" },
 					{ loader: "html-loader",
 					options: {
-						attrs: ["img:src", "use:href"],
-						minimize: true,
+						// attrs: ["img:src", "use:href"],
+						// minimize: true,
 					}
 					}
 				]
